@@ -78,7 +78,7 @@ resource "aws_subnet" "subnet_2" {
 
   vpc_id            = var.vpc_id
 
-  cidr_block        = var.subnet_2_cidr
+  cidr_block        = 10.0.0.0/16
 
   availability_zone = var.az_2
 
@@ -108,7 +108,7 @@ resource "aws_security_group" "default" {
 
     from_port   = 0
 
-    to_port     = 65535
+    to_port     = 8080
 
     protocol    = "TCP"
 
